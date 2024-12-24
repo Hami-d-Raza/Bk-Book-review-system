@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .controls {
+    padding: 20px;
+    background-color: #e8e8e8;
+  }
+  
+  .book-list-form {
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-list-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px; /* Added gap for spacing between cards */
+    padding: 20px;
+    margin: 20px;
+}
+
+  .book-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    height: 100%; /* Ensure all cards are the same height */
+  }
+  
+  .book-image img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .book-info h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .book-info p {
+    font-size: 14px;
+    color: #555;
+    flex-grow: 1; /* Allows the description to grow if needed */
+  }
+  
+  .book-action {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .book-action button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .book-action button:hover {
+    background-color: #45a049;
+  }
+  
+
+  .book-review {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .rating {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    direction: rtl; /* Flip direction to start interaction from the left */
+  }
+  
+  .rating input {
+    display: none; /* Hide radio buttons */
+  }
+  
+  .rating label {
+    font-size: 24px;
+    color: #ddd;
+    cursor: pointer;
+  }
+  
+  /* Highlight stars on hover (left to right) */
+  .rating label:hover,
+  .rating label:hover ~ label {
+    color: #ffcc00;
+  }
+  
+  /* Highlight stars on selection (left to right) */
+  .rating input:checked ~ label {
+    color: #ddd; /* Reset default colors */
+  }
+  
+  .rating input:checked + label,
+  .rating input:checked + label ~ label {
+    color: #ffcc00;
+  }
+  
